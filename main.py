@@ -35,7 +35,7 @@ def main():
         if inp_name == k:
             res = v
 
-    inp_par = input(f'Введите имя параметра {list(res.keys())}: ')
+    inp_par = input(f'Введите имя параметра {list(res.keys())}: ').lower()
 
     if inp_par in res.keys():
         for z, x in res.items():
