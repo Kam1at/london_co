@@ -25,13 +25,25 @@ london_co = {
     }
 }
 
+
 def main():
+    res = ""
+    
     inp_name = input('Введите имя устройства: ')
+
     for k, v in london_co.items():
         if inp_name == k:
-            a = v
-    inp_par = input('Введите имя параметра: ')
-    for z, x in a.items():
-        if inp_par == z:
-            return x
-print(main())
+            res = v
+
+    inp_par = input(f'Введите имя параметра {list(res.keys())}: ')
+
+    if inp_par in res.keys():
+        for z, x in res.items():
+            if inp_par == z:
+                print(x)
+    else:
+        print('Такого параметра нет.')
+
+
+main()
+
